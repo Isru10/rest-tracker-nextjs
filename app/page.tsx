@@ -1,6 +1,7 @@
 import Guest from "@/components/Guest";
 import { currentUser } from "@clerk/nextjs/server";
 import AddNewRecord from "@/components/AddNewRecord";
+import RecordChart from "@/components/RecordChart";
 export default async function Home() {
     const user = await currentUser();
   if (!user) {
@@ -51,7 +52,8 @@ export default async function Home() {
         {/* Right Column */}
         <div className='space-y-6'>
           {/* Placeholder for RecordStats, RecentRecord, and Insights */}
-          {/* <RecordChart />
+          <RecordChart />
+          {/* 
           <AverageSleep />
           <BestWorstSleep /> */}
         </div>
